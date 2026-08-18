@@ -36,6 +36,7 @@ ${cardImage(`/og/${sanitizeSlug(p.slug)}`,p.title)}
 `).join("");
 
 		return layout({
+			category:sanitizeSlug(kategori),
 			title:`${kategori} - ${SITE.name}`,
 			description:`Kumpulan artikel kategori ${kategori} terbaru`,
 			canonical:canonical(`/kategori/${sanitizeSlug(kategori)}${page>1?`?page=${page}`:""}`),
